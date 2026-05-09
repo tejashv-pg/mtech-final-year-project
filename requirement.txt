@@ -1,0 +1,17 @@
+# Web & API
+fastapi==0.109.0
+uvicorn==0.27.0
+python-socketio==5.11.0
+python-multipart==0.0.6
+
+# Machine Learning
+torch==2.1.2
+torchvision==0.16.2
+pandas==2.2.0
+scikit-learn==1.4.0
+numpy==1.26.3
+
+# Utilities
+requests==2.31.0
+matplotlib==3.8.2
+python-dotenv==1.0.1
