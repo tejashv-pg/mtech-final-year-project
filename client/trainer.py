@@ -15,4 +15,8 @@ def train_local_model(model, data, targets, epochs=5):
         optimizer.step()
         print(f"Epoch {epoch+1}/{epochs}, Loss: {loss.item():.4f}")
     
-    return model.get_weights(), loss.item()
+    with torch.no_grad():
+        predictions = (model(data) >= 0.5).float()
+        accuracy = (predictions == targets).float().mean().item() * 100.0
+    
+    return model.get_weights(), loss.item(), accuracy

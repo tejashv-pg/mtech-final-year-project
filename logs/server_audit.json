@@ -1,0 +1,681 @@
+[
+  {
+    "id": "1784123595.218523",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Training Sequence Complete. Reached target round 10. Avg loss: 0.3061",
+    "type": "success"
+  },
+  {
+    "id": "1784123595.213745",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 10: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.210176",
+    "time": "19:23:15",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.2562)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.203887",
+    "time": "19:23:15",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.3561)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.188206",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 9 complete. Avg loss: 0.3156. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123595.180045",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 9: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.1769",
+    "time": "19:23:15",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.2662)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.172613",
+    "time": "19:23:15",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.3650)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.1474",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 8 complete. Avg loss: 0.3291. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123595.143129",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 8: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.141026",
+    "time": "19:23:15",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.2813)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.129789",
+    "time": "19:23:15",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.3770)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.108157",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 7 complete. Avg loss: 0.3520. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123595.097412",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 7: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.093467",
+    "time": "19:23:15",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.3095)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.020602",
+    "time": "19:23:15",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.3944)",
+    "type": "info"
+  },
+  {
+    "id": "1784123595.004639",
+    "time": "19:23:15",
+    "source": "AGG",
+    "message": "Round 6 complete. Avg loss: 0.3916. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123594.999866",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 6: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.996459",
+    "time": "19:23:14",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.3582)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.989833",
+    "time": "19:23:14",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.4251)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.971218",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 5 complete. Avg loss: 0.4521. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123594.966725",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 5: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.964128",
+    "time": "19:23:14",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.4279)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.95196",
+    "time": "19:23:14",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.4763)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.939428",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 4 complete. Avg loss: 0.5216. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123594.931162",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 4: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.928442",
+    "time": "19:23:14",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.5388)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.925025",
+    "time": "19:23:14",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.5045)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.882323",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 3 complete. Avg loss: 0.5853. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123594.876025",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 3: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.873675",
+    "time": "19:23:14",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.5731)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.868941",
+    "time": "19:23:14",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.5975)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.83141",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 2 complete. Avg loss: 0.6361. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123594.825726",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 2: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.822605",
+    "time": "19:23:14",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.6276)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.815815",
+    "time": "19:23:14",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.6447)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.7965",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 1 complete. Avg loss: 0.6703. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123594.791543",
+    "time": "19:23:14",
+    "source": "AGG",
+    "message": "Round 1: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.788964",
+    "time": "19:23:14",
+    "source": "NODE_srN5",
+    "message": "Received weights (loss: 0.6661)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.784014",
+    "time": "19:23:14",
+    "source": "NODE_-qKl",
+    "message": "Received weights (loss: 0.6745)",
+    "type": "info"
+  },
+  {
+    "id": "1784123594.760574",
+    "time": "19:23:14",
+    "source": "SYS",
+    "message": "Manual Trigger: Starting 10 new rounds (Target: Round 10)...",
+    "type": "info"
+  },
+  {
+    "id": "1784123560.759172",
+    "time": "19:22:40",
+    "source": "NODE",
+    "message": "Hospital Node Connected: srN5QvPXCmqhisTzAAAF (Hospital_0)",
+    "type": "success"
+  },
+  {
+    "id": "1784123560.371092",
+    "time": "19:22:40",
+    "source": "NODE",
+    "message": "Hospital Node Connected: -qKlckiXXNKBPmpjAAAD (Hospital_1)",
+    "type": "success"
+  },
+  {
+    "id": "1784123559.897892",
+    "time": "19:22:39",
+    "source": "SYS",
+    "message": "Dashboard Connected: HX43tI5Xtw9nf6omAAAB",
+    "type": "info"
+  },
+  {
+    "id": "1784123553.590764",
+    "time": "19:22:33",
+    "source": "SYS",
+    "message": "Dashboard Disconnected: 2immBs8d4uqOQUIXAAAI",
+    "type": "warning"
+  },
+  {
+    "id": "1784123440.772354",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Training Sequence Complete. Reached target round 10. Avg loss: 0.3394",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.769596",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 10: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.767745",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.3720)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.752446",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.3069)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.733651",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 9 complete. Avg loss: 0.3687. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.728541",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 9: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.726687",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.3987)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.712172",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.3386)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.698778",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 8 complete. Avg loss: 0.4016. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.691059",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 8: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.687003",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.4293)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.681986",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.3740)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.670314",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 7 complete. Avg loss: 0.4370. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.663498",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 7: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.660948",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.4132)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.656527",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.4608)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.629488",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 6 complete. Avg loss: 0.4815. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.621438",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 6: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.61912",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.5008)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.615225",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.4621)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.52789",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 5 complete. Avg loss: 0.5396. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.522662",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 5: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.521043",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.5512)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.507799",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.5280)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.487086",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 4 complete. Avg loss: 0.5995. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.482021",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 4: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.480153",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.6060)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.466829",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.5931)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.441689",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 3 complete. Avg loss: 0.6470. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.433767",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 3: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.431353",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.6445)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.419792",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.6494)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.40166",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 2 complete. Avg loss: 0.6787. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.398061",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 2: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.39637",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.6789)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.377425",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.6784)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.363655",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 1 complete. Avg loss: 0.7010. Starting next round...",
+    "type": "success"
+  },
+  {
+    "id": "1784123440.356475",
+    "time": "19:20:40",
+    "source": "AGG",
+    "message": "Round 1: All weights received. Running FedAvg...",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.354287",
+    "time": "19:20:40",
+    "source": "NODE__aHl",
+    "message": "Received weights (loss: 0.6984)",
+    "type": "info"
+  },
+  {
+    "id": "1784123440.347292",
+    "time": "19:20:40",
+    "source": "NODE_5Rhg",
+    "message": "Received weights (loss: 0.7036)",
+    "type": "info"
+  },
+  {
+    "id": "1784123439.863706",
+    "time": "19:20:39",
+    "source": "SYS",
+    "message": "Manual Trigger: Starting 10 new rounds (Target: Round 10)...",
+    "type": "info"
+  },
+  {
+    "id": "1784123437.131903",
+    "time": "19:20:37",
+    "source": "SYS",
+    "message": "Dashboard Connected: 2immBs8d4uqOQUIXAAAI",
+    "type": "info"
+  },
+  {
+    "id": "1784123436.928358",
+    "time": "19:20:36",
+    "source": "SYS",
+    "message": "Dashboard Disconnected: YlUOC6-Y-8qMjN--AAAD",
+    "type": "warning"
+  },
+  {
+    "id": "1784123429.753272",
+    "time": "19:20:29",
+    "source": "NODE",
+    "message": "Hospital Node Connected: _aHl9vslHPfbMzQyAAAF (Hospital_1)",
+    "type": "success"
+  },
+  {
+    "id": "1784123429.651346",
+    "time": "19:20:29",
+    "source": "SYS",
+    "message": "Dashboard Connected: YlUOC6-Y-8qMjN--AAAD",
+    "type": "info"
+  },
+  {
+    "id": "1784123429.474006",
+    "time": "19:20:29",
+    "source": "NODE",
+    "message": "Hospital Node Connected: 5RhgL57dNdHTK80WAAAB (Hospital_0)",
+    "type": "success"
+  },
+  {
+    "id": "1784123423.26735",
+    "time": "19:20:23",
+    "source": "SYS",
+    "message": "Dashboard Disconnected: 7JAUVLhAx3UaPlUCAAAB",
+    "type": "warning"
+  },
+  {
+    "id": "1784123402.22613",
+    "time": "19:20:02",
+    "source": "SYS",
+    "message": "Dashboard Disconnected: 5E3WQ1hP7j9rmJk5AAAD",
+    "type": "warning"
+  },
+  {
+    "id": "1784122480.418617",
+    "time": "19:04:40",
+    "source": "NODE",
+    "message": "Hospital Node Connected: fnEynePT30ol_l8RAAAH (Hospital_0)",
+    "type": "success"
+  },
+  {
+    "id": "1784122478.915276",
+    "time": "19:04:38",
+    "source": "NODE",
+    "message": "Hospital Node Connected: bVGjjLBDnCt3n8kGAAAF (Hospital_1)",
+    "type": "success"
+  },
+  {
+    "id": "1784122473.864328",
+    "time": "19:04:33",
+    "source": "SYS",
+    "message": "Dashboard Connected: 5E3WQ1hP7j9rmJk5AAAD",
+    "type": "info"
+  },
+  {
+    "id": "1784122473.794539",
+    "time": "19:04:33",
+    "source": "SYS",
+    "message": "Dashboard Connected: 7JAUVLhAx3UaPlUCAAAB",
+    "type": "info"
+  }
+]

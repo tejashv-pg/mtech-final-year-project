@@ -1,7 +1,8 @@
 import React from 'react';
 
-export function SystemStatus({ isConnected, nodeCount, round, receivedCount }) {
+export function SystemStatus({ isConnected, nodeCount, round, receivedCount, isTraining }) {
   const isCollecting = receivedCount > 0 && receivedCount < nodeCount;
+  const isActive = isTraining || isCollecting;
   const percent = nodeCount > 0 ? Math.round((receivedCount / nodeCount) * 100) : 0;
   const offset = 282.7 - (282.7 * percent / 100);
 
@@ -35,7 +36,7 @@ export function SystemStatus({ isConnected, nodeCount, round, receivedCount }) {
             <span className="font-body-sm text-body-sm">Training State</span>
           </div>
           <span className="text-tertiary font-mono-data text-mono-data uppercase">
-            {isCollecting ? 'Collecting...' : 'Active'}
+            {isCollecting ? 'Collecting...' : (isTraining ? 'Training' : 'Idle')}
           </span>
         </div>
       </div>
@@ -59,9 +60,9 @@ export function SystemStatus({ isConnected, nodeCount, round, receivedCount }) {
           </div>
         </div>
         <div className="mt-md text-center">
-          <p className="font-body-lg text-body-lg font-bold">Round {round + (isCollecting ? 1 : 0)} {isCollecting ? 'Collecting...' : 'Idle'}</p>
+          <p className="font-body-lg text-body-lg font-bold">Round {round + (isActive ? 1 : 0)} {isCollecting ? 'Collecting...' : (isTraining ? 'Training...' : 'Idle')}</p>
           <p className="font-body-sm text-body-sm text-on-surface-variant">
-            {isCollecting ? `${receivedCount}/${nodeCount} hospitals responded` : 'Waiting for hospitals...'}
+            {isCollecting ? `${receivedCount}/${nodeCount} hospitals responded` : (isTraining ? 'Hospitals are training on local data...' : 'Waiting for hospitals...')}
           </p>
         </div>
       </div>

@@ -13,6 +13,7 @@ export function useSocket() {
   const [loss, setLoss] = useState(0);
   const [accuracy, setAccuracy] = useState(0);
   const [connectedHospitals, setConnectedHospitals] = useState([]);
+  const [isTraining, setIsTraining] = useState(false);
   
   // Historical data for charts
   const [lossHistory, setLossHistory] = useState([]);
@@ -84,10 +85,12 @@ export function useSocket() {
         return next;
       });
 
+      setIsTraining(false);
       addLog('AGG', `Round ${data.round} complete. Global model updated.`, 'text-secondary', 'text-secondary');
     };
 
     const onUpdateGlobalModel = () => {
+      setIsTraining(true);
       addLog('AGG', 'Global weights broadcasted to nodes.', 'text-on-surface-variant', 'text-secondary');
     };
 
@@ -132,6 +135,7 @@ export function useSocket() {
     receivedCount,
     logs,
     triggerTraining,
-    connectedHospitals
+    connectedHospitals,
+    isTraining
   };
 }

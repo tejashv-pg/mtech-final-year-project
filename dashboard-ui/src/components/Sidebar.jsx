@@ -8,49 +8,54 @@ export function Sidebar({ activeTab, setActiveTab }) {
         <p className="font-mono-label text-mono-label text-on-surface-variant mt-1">v1.0.4 Aggregator</p>
       </div>
       <nav className="flex-grow space-y-1">
-        <button 
+        <button
           onClick={() => setActiveTab('dashboard')}
           className={`w-full flex items-center gap-3 px-md py-sm rounded-lg transition-all ${activeTab === 'dashboard' ? 'bg-secondary-container/20 text-secondary-fixed-dim font-bold' : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50'}`}
         >
           <span className="material-symbols-outlined" style={{ fontVariationSettings: activeTab === 'dashboard' ? "'FILL' 1" : "'FILL' 0" }}>dashboard</span>
           <span className="font-body-sm text-body-sm">Dashboard</span>
         </button>
-        <button className="w-full flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group">
-          <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">hub</span>
+        <button
+          onClick={() => setActiveTab('models')}
+          className={`w-full flex items-center gap-3 px-md py-sm rounded-lg transition-all group ${activeTab === 'models' ? 'bg-secondary-container/20 text-secondary-fixed-dim font-bold' : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50'}`}
+        >
+          <span className="material-symbols-outlined group-hover:translate-x-1 duration-300" style={{ fontVariationSettings: activeTab === 'models' ? "'FILL' 1" : "'FILL' 0" }}>hub</span>
           <span className="font-body-sm text-body-sm">Models</span>
         </button>
-        <button 
+        <button
           onClick={() => setActiveTab('hospitals')}
           className={`w-full flex items-center gap-3 px-md py-sm rounded-lg transition-all group ${activeTab === 'hospitals' ? 'bg-secondary-container/20 text-secondary-fixed-dim font-bold' : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50'}`}
         >
           <span className="material-symbols-outlined group-hover:translate-x-1 duration-300" style={{ fontVariationSettings: activeTab === 'hospitals' ? "'FILL' 1" : "'FILL' 0" }}>local_hospital</span>
           <span className="font-body-sm text-body-sm">Hospitals</span>
         </button>
-        <button className="w-full flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group">
+        {/* <button className="w-full flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group">
           <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">verified_user</span>
           <span className="font-body-sm text-body-sm">Security</span>
-        </button>
+        </button> */}
       </nav>
       <div className="mt-auto pt-md border-t border-outline-variant/10 space-y-1">
         <div className="flex items-center gap-3 p-sm mb-md rounded-xl bg-surface-container-high/30">
-          <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold">DS</div>
+          <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold">TH</div>
           <div>
-            <p className="font-body-sm text-body-sm font-bold text-on-surface">Dr. Sterling</p>
+            <p className="font-body-sm text-body-sm font-bold text-on-surface">Tejas H V</p>
             <p className="font-mono-label text-[10px] text-on-surface-variant">Protocol Admin</p>
           </div>
         </div>
-        <button className="w-full flex items-center justify-center gap-2 py-sm bg-primary text-on-primary font-bold rounded-lg cursor-pointer active:scale-95 duration-200">
+        <button 
+          onClick={() => setActiveTab('audit_logs')}
+          className={`w-full flex items-center justify-center gap-2 py-sm font-bold rounded-lg cursor-pointer active:scale-95 duration-200 ${activeTab === 'audit_logs' ? 'bg-primary text-on-primary shadow-md' : 'bg-surface-container-high text-primary hover:bg-primary/10'}`}>
           <span className="material-symbols-outlined text-[18px]">history_edu</span>
           <span className="text-body-sm">View Audit Logs</span>
         </button>
-        <a className="flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-primary transition-colors" href="#">
+        {/* <a className="flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-primary transition-colors" href="#">
           <span className="material-symbols-outlined">settings</span>
           <span className="font-body-sm text-body-sm">Settings</span>
         </a>
         <a className="flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-primary transition-colors" href="#">
           <span className="material-symbols-outlined">help</span>
           <span className="font-body-sm text-body-sm">Support</span>
-        </a>
+        </a> */}
       </div>
     </aside>
   );

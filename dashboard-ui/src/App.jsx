@@ -7,6 +7,8 @@ import { SystemStatus } from './components/SystemStatus';
 import { ActivityLog } from './components/ActivityLog';
 import { LossChart, AccuracyChart, ContributionsChart } from './components/Charts';
 import { HospitalsTab } from './components/HospitalsTab';
+import { ModelsTab } from './components/ModelsTab';
+import { AuditLogsTab } from './components/AuditLogsTab';
 import './index.css';
 
 function App() {
@@ -22,7 +24,8 @@ function App() {
     receivedCount,
     logs,
     triggerTraining,
-    connectedHospitals
+    connectedHospitals,
+    isTraining
   } = useSocket();
 
   const [activeTab, setActiveTab] = React.useState('dashboard');
@@ -49,13 +52,17 @@ function App() {
               </div>
               
               <div className="col-span-12 lg:col-span-4 space-y-gutter">
-                <SystemStatus isConnected={isConnected} nodeCount={nodeCount} round={round} receivedCount={receivedCount} />
+                <SystemStatus isConnected={isConnected} nodeCount={nodeCount} round={round} receivedCount={receivedCount} isTraining={isTraining} />
                 <ActivityLog logs={logs} />
               </div>
             </div>
           </div>
         ) : activeTab === 'hospitals' ? (
           <HospitalsTab hospitals={connectedHospitals} />
+        ) : activeTab === 'models' ? (
+          <ModelsTab round={round} accuracy={accuracy} loss={loss} accuracyHistory={accuracyHistory} lossHistory={lossHistory} />
+        ) : activeTab === 'audit_logs' ? (
+          <AuditLogsTab />
         ) : (
           <div className="p-margin flex flex-col items-center justify-center flex-grow text-on-surface-variant font-headline-md">
             View under construction...

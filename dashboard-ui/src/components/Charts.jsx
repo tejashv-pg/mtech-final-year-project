@@ -135,7 +135,11 @@ export function ContributionsChart({ perNodeContributions, currentRound }) {
       return {
         label: node,
         data: dataPoints,
+        borderColor: colors[i % colors.length],
         backgroundColor: colors[i % colors.length],
+        fill: false,
+        tension: 0.3,
+        borderWidth: 2,
       };
     });
 
@@ -170,8 +174,8 @@ export function ContributionsChart({ perNodeContributions, currentRound }) {
           )}
         </div>
       </div>
-      <div className="h-[300px] w-full py-md mt-auto">
-        <Bar data={data} options={options} />
+      <div className="flex-grow w-full py-md">
+        <Line data={data} options={options} />
       </div>
     </div>
   );

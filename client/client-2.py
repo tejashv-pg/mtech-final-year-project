@@ -25,11 +25,11 @@ def on_update(data):
     model.set_weights(data["weights"])
     
     # 2. Train locally on private data
-    new_weights, loss = train_local_model(model, X, y, epochs=3)
+    new_weights, loss, accuracy = train_local_model(model, X, y, epochs=3)
     
     # 3. Send only the weights back
-    sio.emit("send_weights", {"weights": new_weights, "loss": loss})
-    print(f"📤 Local training complete. Loss: {loss:.4f}. Weights sent.")
+    sio.emit("send_weights", {"weights": new_weights, "loss": loss, "accuracy": accuracy})
+    print(f"📤 Local training complete. Loss: {loss:.4f}, Acc: {accuracy:.1f}%. Weights sent.")
 
 if __name__ == "__main__":
     sio.connect(f"{SERVER_URL}?client_type=hospital&hospital_id={CLIENT_ID}&hospital_name=Hospital_{CLIENT_ID}")
