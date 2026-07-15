@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0c1324; /* surface-dim */
+    color: #dce1fb; /* on-surface */
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(21, 27, 45, 0.7); /* surface-container-low with opacity */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+  }
+  .glass-card:hover {
+    border-color: rgba(180, 197, 255, 0.2); /* primary with opacity */
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
+  }
+}
+
+@layer utilities {
+  .pulse-emerald {
+    box-shadow: 0 0 0 0 rgba(104, 219, 169, 0.7);
+    animation: pulse-emerald 2s infinite;
+  }
+  @keyframes pulse-emerald {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(104, 219, 169, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(104, 219, 169, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(104, 219, 169, 0); }
+  }
+  .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: #434655; border-radius: 10px; }
+}
