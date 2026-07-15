@@ -5,7 +5,7 @@ from trainer import train_local_model
 import torch
 
 # Configuration
-SERVER_URL = "http://localhost:8000"
+SERVER_URL = "http://13.200.249.7:8000"
 CLIENT_ID = 0 # Change to 1 for the second simulated hospital
 sio = socketio.Client()
 

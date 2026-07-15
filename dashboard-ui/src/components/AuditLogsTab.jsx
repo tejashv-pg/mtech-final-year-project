@@ -7,7 +7,7 @@ export function AuditLogsTab() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await fetch('http://127.0.0.1:8000/api/audit-logs');
+        const res = await fetch('http://13.200.249.7:8000/api/audit-logs');
         const data = await res.json();
         setLogs(data);
       } catch (err) {

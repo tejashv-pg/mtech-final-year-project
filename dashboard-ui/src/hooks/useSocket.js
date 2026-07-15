@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { io } from 'socket.io-client';
 
-const socket = io("http://127.0.0.1:8000", { 
+const socket = io("http://13.200.249.7:8000", { 
   autoConnect: false,
   query: { client_type: 'dashboard' }
 });
@@ -117,7 +117,7 @@ export function useSocket() {
   const triggerTraining = async () => {
     addLog('USER', 'Initiated manual training round.', 'text-primary', 'text-primary');
     try {
-      await fetch('http://127.0.0.1:8000/start-training', { method: 'POST' });
+      await fetch('http://13.200.249.7:8000/start-training', { method: 'POST' });
     } catch (e) {
       addLog('ERROR', 'Failed to trigger training.', 'text-error', 'text-error');
     }

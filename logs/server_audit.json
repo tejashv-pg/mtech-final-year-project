@@ -1,5 +1,26 @@
 [
   {
+    "id": "1784132804.544814",
+    "time": "21:56:44",
+    "source": "SYS",
+    "message": "Dashboard Disconnected: 2AInuAV01707gO6MAAAJ",
+    "type": "warning"
+  },
+  {
+    "id": "1784132484.355802",
+    "time": "21:51:24",
+    "source": "SYS",
+    "message": "Dashboard Connected: 2AInuAV01707gO6MAAAJ",
+    "type": "info"
+  },
+  {
+    "id": "1784126312.938379",
+    "time": "20:08:32",
+    "source": "SYS",
+    "message": "Dashboard Disconnected: HX43tI5Xtw9nf6omAAAB",
+    "type": "warning"
+  },
+  {
     "id": "1784123595.218523",
     "time": "19:23:15",
     "source": "AGG",
