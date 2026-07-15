@@ -12,6 +12,7 @@ export function useSocket() {
   const [round, setRound] = useState(0);
   const [loss, setLoss] = useState(0);
   const [accuracy, setAccuracy] = useState(0);
+  const [connectedHospitals, setConnectedHospitals] = useState([]);
   
   // Historical data for charts
   const [lossHistory, setLossHistory] = useState([]);
@@ -45,6 +46,10 @@ export function useSocket() {
     const onNodeCountUpdate = (data) => {
       setNodeCount(data.nodeCount);
       addLog('SYS', `Nodes connected: ${data.nodeCount}`);
+    };
+
+    const onHospitalsUpdate = (data) => {
+      setConnectedHospitals(data);
     };
 
     const onWeightReceived = (data) => {
@@ -89,6 +94,7 @@ export function useSocket() {
     socket.on('connect', onConnect);
     socket.on('disconnect', onDisconnect);
     socket.on('node_count_update', onNodeCountUpdate);
+    socket.on('hospitals_update', onHospitalsUpdate);
     socket.on('weight_received', onWeightReceived);
     socket.on('dashboard_update', onDashboardUpdate);
     socket.on('update_global_model', onUpdateGlobalModel);
@@ -97,6 +103,7 @@ export function useSocket() {
       socket.off('connect', onConnect);
       socket.off('disconnect', onDisconnect);
       socket.off('node_count_update', onNodeCountUpdate);
+      socket.off('hospitals_update', onHospitalsUpdate);
       socket.off('weight_received', onWeightReceived);
       socket.off('dashboard_update', onDashboardUpdate);
       socket.off('update_global_model', onUpdateGlobalModel);
@@ -124,6 +131,7 @@ export function useSocket() {
     perNodeContributions,
     receivedCount,
     logs,
-    triggerTraining
+    triggerTraining,
+    connectedHospitals
   };
 }

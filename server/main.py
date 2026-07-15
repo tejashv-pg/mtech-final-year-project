@@ -2,6 +2,7 @@ import socketio
 from fastapi import FastAPI
 import uvicorn
 from aggregator import FedAggregator
+from urllib.parse import parse_qs
 from model import HeartDiseaseModel
 
 initial_model = HeartDiseaseModel()
@@ -11,7 +12,7 @@ sio = socketio.AsyncServer(async_mode='asgi', cors_allowed_origins="*")
 combined_app = socketio.ASGIApp(sio, app)
 
 aggregator = FedAggregator()
-connected_clients = []
+connected_clients = {}
 received_weights = []
 node_losses = {}          # sid -> latest loss
 current_round = 0
@@ -26,22 +27,27 @@ def _dashboard_state():
 @sio.event
 async def connect(sid, environ):
     query = environ.get('QUERY_STRING', '')
-    if 'client_type=dashboard' not in query:
-        connected_clients.append(sid)
-        print(f"🏥 Hospital Node Connected: {sid}")
-    else:
+    parsed_query = parse_qs(query)
+    if 'client_type' in parsed_query and 'dashboard' in parsed_query['client_type']:
         print(f"🖥️ Dashboard Connected: {sid}")
+    else:
+        h_id = parsed_query.get('hospital_id', ['unknown'])[0]
+        h_name = parsed_query.get('hospital_name', [f'Hospital_{sid[:4]}'])[0]
+        connected_clients[sid] = {"id": h_id, "name": h_name, "status": "Connected"}
+        print(f"🏥 Hospital Node Connected: {sid} ({h_name})")
     await sio.emit("node_count_update", _dashboard_state())
+    await sio.emit("hospitals_update", list(connected_clients.values()))
 
 @sio.event
 async def disconnect(sid):
     if sid in connected_clients:
-        connected_clients.remove(sid)
-        print(f"🏥 Hospital Node Disconnected: {sid}")
+        popped = connected_clients.pop(sid)
+        print(f"🏥 Hospital Node Disconnected: {sid} ({popped.get('name')})")
     else:
         print(f"🖥️ Dashboard Disconnected: {sid}")
     node_losses.pop(sid, None)
     await sio.emit("node_count_update", _dashboard_state())
+    await sio.emit("hospitals_update", list(connected_clients.values()))
 
 @sio.on("send_weights")
 async def handle_weights(sid, data):

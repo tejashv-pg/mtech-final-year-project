@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Sidebar() {
+export function Sidebar({ activeTab, setActiveTab }) {
   return (
     <aside className="hidden md:flex flex-col h-screen w-64 bg-surface-container-low backdrop-blur-xl border-r border-outline-variant/20 shadow-lg fixed left-0 top-0 z-[60] p-md space-y-base_unit">
       <div className="mb-xl px-sm">
@@ -8,22 +8,28 @@ export function Sidebar() {
         <p className="font-mono-label text-mono-label text-on-surface-variant mt-1">v1.0.4 Aggregator</p>
       </div>
       <nav className="flex-grow space-y-1">
-        <a className="flex items-center gap-3 px-md py-sm bg-secondary-container/20 text-secondary-fixed-dim font-bold rounded-lg transition-all" href="#">
-          <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>dashboard</span>
+        <button 
+          onClick={() => setActiveTab('dashboard')}
+          className={`w-full flex items-center gap-3 px-md py-sm rounded-lg transition-all ${activeTab === 'dashboard' ? 'bg-secondary-container/20 text-secondary-fixed-dim font-bold' : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50'}`}
+        >
+          <span className="material-symbols-outlined" style={{ fontVariationSettings: activeTab === 'dashboard' ? "'FILL' 1" : "'FILL' 0" }}>dashboard</span>
           <span className="font-body-sm text-body-sm">Dashboard</span>
-        </a>
-        <a className="flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group" href="#">
+        </button>
+        <button className="w-full flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group">
           <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">hub</span>
           <span className="font-body-sm text-body-sm">Models</span>
-        </a>
-        <a className="flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group" href="#">
-          <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">local_hospital</span>
+        </button>
+        <button 
+          onClick={() => setActiveTab('hospitals')}
+          className={`w-full flex items-center gap-3 px-md py-sm rounded-lg transition-all group ${activeTab === 'hospitals' ? 'bg-secondary-container/20 text-secondary-fixed-dim font-bold' : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50'}`}
+        >
+          <span className="material-symbols-outlined group-hover:translate-x-1 duration-300" style={{ fontVariationSettings: activeTab === 'hospitals' ? "'FILL' 1" : "'FILL' 0" }}>local_hospital</span>
           <span className="font-body-sm text-body-sm">Hospitals</span>
-        </a>
-        <a className="flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group" href="#">
+        </button>
+        <button className="w-full flex items-center gap-3 px-md py-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 rounded-lg transition-all group">
           <span className="material-symbols-outlined group-hover:translate-x-1 duration-300">verified_user</span>
           <span className="font-body-sm text-body-sm">Security</span>
-        </a>
+        </button>
       </nav>
       <div className="mt-auto pt-md border-t border-outline-variant/10 space-y-1">
         <div className="flex items-center gap-3 p-sm mb-md rounded-xl bg-surface-container-high/30">

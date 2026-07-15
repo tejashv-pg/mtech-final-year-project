@@ -6,6 +6,7 @@ import { StatCards } from './components/StatCards';
 import { SystemStatus } from './components/SystemStatus';
 import { ActivityLog } from './components/ActivityLog';
 import { LossChart, AccuracyChart, ContributionsChart } from './components/Charts';
+import { HospitalsTab } from './components/HospitalsTab';
 import './index.css';
 
 function App() {
@@ -20,35 +21,46 @@ function App() {
     perNodeContributions,
     receivedCount,
     logs,
-    triggerTraining
+    triggerTraining,
+    connectedHospitals
   } = useSocket();
+
+  const [activeTab, setActiveTab] = React.useState('dashboard');
 
   return (
     <>
-      <Sidebar />
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
       <main className="flex-grow md:ml-64 flex flex-col min-h-screen">
         <TopBar isConnected={isConnected} onStartRound={triggerTraining} />
         
-        <div className="p-margin flex flex-col gap-gutter max-w-[1600px] mx-auto w-full flex-grow">
-          <StatCards nodeCount={nodeCount} round={round} />
-          
-          <div className="grid grid-cols-12 gap-gutter">
-            <div className="col-span-12 lg:col-span-8 space-y-gutter flex flex-col">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <LossChart lossHistory={lossHistory} currentLoss={loss} />
-                <AccuracyChart accuracyHistory={accuracyHistory} currentAccuracy={accuracy} />
-              </div>
-              <div className="flex-grow min-h-[400px]">
-                <ContributionsChart perNodeContributions={perNodeContributions} currentRound={round} />
-              </div>
-            </div>
+        {activeTab === 'dashboard' ? (
+          <div className="p-margin flex flex-col gap-gutter max-w-[1600px] mx-auto w-full flex-grow">
+            <StatCards nodeCount={nodeCount} round={round} />
             
-            <div className="col-span-12 lg:col-span-4 space-y-gutter">
-              <SystemStatus isConnected={isConnected} nodeCount={nodeCount} round={round} receivedCount={receivedCount} />
-              <ActivityLog logs={logs} />
+            <div className="grid grid-cols-12 gap-gutter">
+              <div className="col-span-12 lg:col-span-8 space-y-gutter flex flex-col">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                  <LossChart lossHistory={lossHistory} currentLoss={loss} />
+                  <AccuracyChart accuracyHistory={accuracyHistory} currentAccuracy={accuracy} />
+                </div>
+                <div className="flex-grow min-h-[400px]">
+                  <ContributionsChart perNodeContributions={perNodeContributions} currentRound={round} />
+                </div>
+              </div>
+              
+              <div className="col-span-12 lg:col-span-4 space-y-gutter">
+                <SystemStatus isConnected={isConnected} nodeCount={nodeCount} round={round} receivedCount={receivedCount} />
+                <ActivityLog logs={logs} />
+              </div>
             </div>
           </div>
-        </div>
+        ) : activeTab === 'hospitals' ? (
+          <HospitalsTab hospitals={connectedHospitals} />
+        ) : (
+          <div className="p-margin flex flex-col items-center justify-center flex-grow text-on-surface-variant font-headline-md">
+            View under construction...
+          </div>
+        )}
 
         <footer className="full-width py-xl mt-auto bg-surface-container-lowest border-t border-outline-variant/10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-lg max-w-7xl mx-auto px-margin items-center">

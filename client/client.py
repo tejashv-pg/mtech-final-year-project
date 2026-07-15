@@ -32,7 +32,7 @@ def on_update(data):
     print(f"📤 Local training complete. Loss: {loss:.4f}. Weights sent.")
 
 if __name__ == "__main__":
-    sio.connect(SERVER_URL)
+    sio.connect(f"{SERVER_URL}?client_type=hospital&hospital_id={CLIENT_ID}&hospital_name=Hospital_{CLIENT_ID}")
     # Start the first round manually to test
     # In production, the server triggers this.
     sio.wait()
