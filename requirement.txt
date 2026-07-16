@@ -5,8 +5,8 @@ python-socketio==5.11.0
 python-multipart==0.0.6
 
 # Machine Learning
-torch==2.1.2
-torchvision==0.16.2
+torch
+torchvision
 pandas==2.2.0
 scikit-learn==1.4.0
 numpy==1.26.3
